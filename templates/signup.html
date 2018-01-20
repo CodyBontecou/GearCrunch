@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% load static %}
+{% block content %}
+    <section id="banner">
+        <div class="inner">
+            <div class="content">
+                <div class="col-6 col-12-medium">
+                    <br>
+                    <h2>We're sorry - our services are currently unavailable</h2>
+                    <h3>Join our mailing list to get an update once we launch.</h3>
+                    <form role="form" action="" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <video autoplay loop muted playsinline src="{% static "images/landing_page.mp4" %}"></video>
+    </section>
+{% endblock %}
